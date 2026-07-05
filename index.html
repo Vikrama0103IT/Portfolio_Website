@@ -24,6 +24,7 @@
     </ul>
 
     <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme" title="Toggle theme">🌙</button>
       <a class="resume-btn" href="assets/Vikram_Kumar_Resume_Automation.pdf" target="_blank">Resume</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -263,8 +264,7 @@
     <div class="container">
       <h2 class="section-title">Contact</h2>
       <p class="section-sub"></p>
-      <!-- Formspree: replace YOUR_FORM_ID below with the ID from your formspree.io form -->
-      <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form id="contactForm">
         <input type="text" name="name" placeholder="Your Name" required/>
         <input type="email" name="email" placeholder="Your Email" required/>
         <textarea name="message" placeholder="Your Message" required></textarea>

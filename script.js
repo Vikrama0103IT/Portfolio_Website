@@ -1,4 +1,31 @@
 /* ================================
+   LIGHT / DARK THEME TOGGLE
+================================ */
+const themeToggle = document.getElementById("themeToggle");
+const rootEl = document.documentElement;
+
+function applyTheme(theme) {
+  if (theme === "dark") {
+    rootEl.setAttribute("data-theme", "dark");
+    if (themeToggle) themeToggle.textContent = "☀️";
+  } else {
+    rootEl.removeAttribute("data-theme");
+    if (themeToggle) themeToggle.textContent = "🌙";
+  }
+}
+
+// Load saved preference (defaults to light)
+applyTheme(localStorage.getItem("theme") || "light");
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const next = rootEl.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(next);
+    localStorage.setItem("theme", next);
+  });
+}
+
+/* ================================
    SMOOTH SCROLL + CLOSE MOBILE MENU
 ================================ */
 const navLinksContainer = document.getElementById("navLinks");
@@ -89,15 +116,14 @@ const statObserver = new IntersectionObserver(
 document.querySelectorAll(".stat-num").forEach(el => statObserver.observe(el));
 
 /* ================================
-   CONTACT FORM (NO BACKEND)
+   CONTACT FORM → OPENS EMAIL TO ME
 ================================ */
 const form = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
+const MY_EMAIL = "vikramakumar21@gmail.com";
 
 if (form) {
-  const submitBtn = form.querySelector("button[type='submit']");
-
-  form.addEventListener("submit", async e => {
+  form.addEventListener("submit", e => {
     e.preventDefault();
 
     const name = form.querySelector("input[type='text']").value.trim();
@@ -110,44 +136,22 @@ if (form) {
       return;
     }
 
-    // If the Formspree endpoint hasn't been configured yet, fail gracefully.
-    if (form.action.includes("YOUR_FORM_ID")) {
-      formStatus.style.color = "#f87171";
-      formStatus.textContent = "Form not configured yet — add your Formspree ID.";
-      return;
-    }
+    const subject = `Portfolio contact from ${name}`;
+    const body =
+      `Name: ${name}\n` +
+      `Email: ${email}\n\n` +
+      `${message}`;
 
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Sending…";
-    formStatus.style.color = "#c7c9ff";
-    formStatus.textContent = "";
+    // Open the visitor's email app with a pre-filled message to me.
+    window.location.href =
+      `mailto:${MY_EMAIL}` +
+      `?subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
 
-    try {
-      const res = await fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" }
-      });
-
-      if (res.ok) {
-        formStatus.style.color = "#22d3ee";
-        formStatus.textContent = "✓ Thank you! Your message has been sent.";
-        form.reset();
-      } else {
-        const data = await res.json().catch(() => ({}));
-        formStatus.style.color = "#f87171";
-        formStatus.textContent =
-          data.errors?.map(err => err.message).join(", ") ||
-          "Something went wrong. Please try again.";
-      }
-    } catch {
-      formStatus.style.color = "#f87171";
-      formStatus.textContent = "Network error. Please try again.";
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Send Message";
-      setTimeout(() => (formStatus.textContent = ""), 6000);
-    }
+    formStatus.style.color = "var(--cyan)";
+    formStatus.textContent = "✓ Opening your email app to send the message…";
+    form.reset();
+    setTimeout(() => (formStatus.textContent = ""), 6000);
   });
 }
 
