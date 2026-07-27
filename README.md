@@ -1,69 +1,72 @@
-👋 Hi, I’m Vikram Kumar
+# 👋 Hi, I'm Vikram Kumar
 
-Summary
-I am an Associate QA Engineer at Jio Platforms Limited with hands-on experience in game testing, QA automation, web scraping, and AI-driven tooling. I specialize in improving product quality, performance, and developer efficiency through automation, data-driven insights, and modern testing frameworks. I am actively upskilling to transition into Automation Testing and DevOps roles.
+**Backend Software Engineer** — building scalable services with Python, Django, Node.js, and REST APIs.
 
-🏢 Experience
-Associate QA Engineer
+🌐 **Live Portfolio:** https://vikrama0103it.github.io/Portfolio_Website/
 
-Automated web scraping pipelines using Playwright (Python) to extract competitor game data, reducing manual effort by 60% and accelerating analysis workflows by 2×.
+---
 
-Validated 75+ games and resolved 500+ issues through debugging and console analysis, improving game performance, stability, and overall player experience by 2×.
+## 🧑‍💻 About
 
-Built a RAG-based AI assistant for the JioGames platform, enabling self-service knowledge access and reducing dependency on senior engineers and issue resolution time by approximately 60%.
+I'm a Software Engineer at **Jio Platform Limited** with a strong backend focus. I build REST APIs, real-time services, and automation tooling using **Python/Django** and **Node.js/Express**, backed by relational and NoSQL databases. I care about clean, maintainable architecture, reliable systems, and shipping to production through Docker and CI/CD. I'm continuously deepening my expertise in scalable backend design and cloud (AWS & Azure).
 
-Managed QA and Pre-QA status for 9,000+ games, automating tracking and weekly reporting using Power BI dashboards, cutting manual reporting effort by 65% and improving cross-team visibility.
+---
 
-Developed 10+ sample games with integrated JioGames SDKs, enabling partner developers to reference working implementations and significantly reducing SDK integration confusion.
+## 🏢 Experience
 
-🛠️ Skills
-Programming & Scripting
+### Software Engineer — Jio Platform Limited
+**Dec 2023 – Present · Navi Mumbai, India**
 
-Python, JavaScript
+- Built an automated **QA / Pre-QA reporting service & dashboard** in JavaScript to track release status of **9,000+ games**, cutting manual reporting effort by **80%** and improving cross-team visibility.
+- Developed an automated **web scraper & data pipeline** in **Python** to collect and analyze competitor game data, reducing manual research time by **60%**.
+- Designed and implemented **test automation frameworks** (Playwright, Selenium, Cypress), reducing manual sanity effort by **90%** and speeding up release validation.
+- Built and validated **REST APIs** with Postman across Dev, QA, Staging, and Production — auth flows, game listings, and platform services.
+- Integrated **analytics with Kibana** — clickstream events, gameplay sessions, and payment-gateway transactions.
+- Shipped to production via **Jenkins CI/CD** pipelines and unit testing, reducing defects and improving code quality.
+- Delivered features across **web, PWA, Android, iOS, Smart TV, and STB**.
 
-Web Development
+---
 
-HTML, CSS, React.js
+## 🚀 Projects
 
-Databases
+### AI Assistant API Service
+Backend service exposing a REST API that integrates the Google Gemini API, with secure env-based secrets, structured error handling, and cloud deployment.
+**Tech:** Node.js · Express · REST API · Gemini API · Render
+🔗 https://qa-automation-assistant.onrender.com/
 
-MySQL, MongoDB, Vector Databases
+### Block Count — Real-Time Backend
+Real-time multiplayer game backend on Node.js + Socket.IO with an event-driven architecture: OTP matchmaking, server-authoritative scoring, live state sync, and automatic winner resolution.
+**Tech:** Node.js · Express · Socket.IO · WebSockets
+🔗 https://battle-arena-mixm.onrender.com/
 
-Tools & Technologies
+### Bowling Strike
+Browser-based bowling game with physics-driven ball control, strike detection, sound effects, and score tracking.
+**Tech:** JavaScript · HTML Canvas · CSS
+🔗 https://vikrama0103it.github.io/bowling_Strike/
 
-Git, Linux, Node.js, Jenkins, Docker, Kubernetes
+---
 
-Testing & Frameworks
+## 🛠️ Skills
 
-Selenium, Cypress, Playwright, Express.js
+**Backend:** Python, Django, Node.js, Express.js, REST APIs, Socket.IO, JavaScript
+**Databases:** MySQL, MongoDB, Vector Database
+**DevOps & Cloud:** Docker, Jenkins, CI/CD, Git, Linux, AWS, Azure
+**Frontend:** HTML, CSS, React.js, Canvas API
+**Testing & QA:** Postman, REST API Testing, Playwright, Selenium, Cypress, Unit Testing
 
+---
 
-🚀 Projects
-QA Automation Assistant
+## 📜 Certifications
 
-Built an AI-powered QA Automation Assistant to answer questions related to Manual Testing, Automation, Selenium, Playwright, Cypress, API Testing, and QA interviews.
+- **Introduction to Selenium** — Test Automation Fundamentals
+- **DevOps Mastery** — Coursera
+- **AWS Fundamentals** — Amazon Web Services
 
-Implemented a Node.js + Express backend integrated with the Google Gemini REST API, including secure environment variable handling, structured error management, and cloud deployment.
+---
 
-Tech Stack:
-HTML, CSS, JavaScript, Node.js, Express.js, Google Gemini API, Git, Render
+## 📫 Contact
 
-Block Count – Real-Time Multiplayer Game
-
-Developed and deployed a real-time multiplayer browser game using JavaScript (Canvas API) with a Node.js + Express + Socket.IO backend.
-
-Implemented OTP-based matchmaking, countdown timer, real-time score synchronization, touch + keyboard controls, automatic winner logic, and seamless restart cycles.
-
-Gained hands-on experience in real-time synchronization, event-driven architecture, game loop optimization, CI/CD deployment on Render, and version control with Git & GitHub.
-
-Tech Stack:
-JavaScript, HTML, CSS, Canvas API, Node.js, Express.js, Socket.IO, Git, GitHub, Render
-
-📚 Coursework & Certifications
-
-Introduction to Selenium – (Link)
-
-Generative AI – (Link)
-
-AWS Fundamentals – (In Progress)
-
+- 📧 vikramakumar21@gmail.com
+- 📱 +91 96607 12386
+- 💼 [LinkedIn](https://www.linkedin.com/in/vikramkumar07/)
+- 🐙 [GitHub](https://github.com/Vikrama0103IT)
